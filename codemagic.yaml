@@ -1,0 +1,8 @@
+workflows:
+  build:
+    name: Build
+    environment:
+      flutter: stable
+    scripts:
+      - flutter pub get
+      - flutter build apk
