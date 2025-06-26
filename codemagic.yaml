@@ -1,0 +1,22 @@
+workflows:
+  default-workflow:
+    name: Build and release
+    max_build_duration: 60
+    environment:
+      flutter: stable
+      xcode: latest
+    working_directory: client
+    scripts:
+      - name: Get dependencies
+        script: |
+          flutter pub get
+      - name: Build Android
+        script: |
+          flutter build apk --release
+      - name: Build iOS
+        script: |
+          flutter build ios --release
+    artifacts:
+      - client/build/**/outputs/**/*.apk
+      - client/build/**/outputs/**/mapping.txt
+      - client/build/ios/iphoneos/Runner.app
