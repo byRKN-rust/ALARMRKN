@@ -1,0 +1,22 @@
+
+name: team_alert_client
+description: Team Alert Flutter Client
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=2.17.0 <3.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^2.0.0
+  firebase_messaging: ^14.0.0
+  cloud_firestore: ^4.0.0
+  flutter_local_notifications: ^15.0.0
+  audioplayers: ^5.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/sounds/
